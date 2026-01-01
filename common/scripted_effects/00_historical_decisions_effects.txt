@@ -1,0 +1,327 @@
+﻿found_historical_cadet_house_decision_effect = {
+    hidden_effect = {
+        house.house_head = {
+            save_scope_as = former_house_head
+        }
+        house = {
+            save_scope_as = former_house
+        }
+        add_achievement_flag_effect = { FLAG = achievement_a_house_of_my_own_flag }
+    }
+    #create_cadet_branch = yes
+    add_prestige = $PRESTIGE$
+
+    hidden_effect = {
+        if = {
+            limit = {
+                dynasty = dynasty:743
+                OR = {
+                    has_title = title:c_ile_de_france
+                    has_title = title:d_valois
+                    has_title = title:k_france
+                }
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_capet
+                    }
+                }
+
+
+            }
+            ROOT = {
+                give_nickname = nick_the_great
+            }
+            general_create_cadet_effect = { HOUSE = house_capet }
+        }
+        else_if = {
+            limit = {
+                dynasty = dynasty:743
+                OR = {
+                    has_title = title:c_ile_de_france
+                    has_title = title:d_valois
+                    has_title = title:k_france
+                }
+                is_target_in_global_variable_list = {
+                    name = global_variable_historical_cadet_houses
+                    target = global_variable_formed_house_capet
+                }
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_Valois_Capet
+                    }
+                }
+            }
+            general_create_cadet_effect = { HOUSE = house_Valois_Capet }
+        }
+        else_if = {
+            limit = {
+                dynasty = dynasty:664
+                OR = {
+                    has_title = title:c_aargau
+                    has_title = title:d_osterreich
+                    has_title = title:k_austria
+                }
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_habsburg
+                    }
+                }
+            }
+            general_create_cadet_effect = { HOUSE = house_habsburg }
+        }
+        else_if = {
+            limit = {
+                dynasty = dynasty:416
+                OR = {
+                    has_title = title:d_bavaria
+                    has_title = title:c_rothenburg
+                }
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_wittelsbach
+                    }
+                }
+            }
+            general_create_cadet_effect = { HOUSE = house_wittelsbach }
+        }
+        else_if = {
+            limit = {
+                dynasty = dynasty:490
+                has_title = title:k_denmark
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_af_gorm
+                    }
+                }
+            }
+            ROOT = {
+                give_nickname = nick_the_old
+            }
+            general_create_cadet_effect = { HOUSE = house_af_gorm }
+        }
+        else_if = {
+            limit = {
+                dynasty = dynasty:490
+                has_title = title:k_england
+                is_target_in_global_variable_list = {
+                    name = global_variable_historical_cadet_houses
+                    target = global_variable_formed_house_af_gorm
+                }
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_knytling
+                    }
+                }
+            }
+            ROOT = {
+                give_nickname = nick_the_great
+            }
+            general_create_cadet_effect = { HOUSE = house_knytling }
+        }
+        else_if = {
+            limit = {
+                dynasty = dynasty:490
+                has_title = title:d_western_isles
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_crovan
+                    }
+                }
+            }
+            general_create_cadet_effect = { HOUSE = house_british_isles_crovan }
+        }
+        else_if = {
+            limit = {
+                dynasty = dynasty:723
+                OR = {
+                    has_title = title:d_anjou
+                    has_title = title:d_normandy
+                }
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_plantagenet
+                    }
+                }
+            }
+            general_create_cadet_effect = { HOUSE = house_plantagenet }
+            ROOT = {
+                give_nickname = nick_the_handsome
+            }
+        }
+        else_if = {
+            limit = {
+                dynasty = dynasty:803
+                has_title = title:d_bavaria
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_welf
+                    }
+                }
+            }
+            general_create_cadet_effect = { HOUSE = house_welf }
+        }
+        else_if = {
+            limit = {
+                dynasty = dynasty:287
+                has_title = title:d_luxembourg
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_luxembourg
+                    }
+                }
+            }
+            general_create_cadet_effect = { HOUSE = house_Luxembourg }
+        }
+        #Shouldn't ever happen, but just in case as fallback option
+        else = {
+            create_cadet_branch = yes
+            save_scope_as = new_head
+
+            house = {
+                save_scope_as = new_house
+            }
+        }
+    }
+
+    every_player = {
+        limit = {
+            exists = house
+            house = scope:new_house
+            NOT = { this = $CHARACTER$ }
+        }
+        send_interface_toast = {
+            type = msg_created_new_house
+            title = created_cadet_branch_toast_new_house_desc
+            left_icon = scope:new_head
+            desc = created_cadet_branch_toast_new_house_other_tt
+        }
+    }
+
+    send_interface_toast = {
+        type = msg_created_new_house
+        title = created_cadet_branch_toast_new_house_desc
+        left_icon = scope:new_head
+        right_icon = scope:former_house_head
+        desc = created_cadet_branch_toast_new_house_other_tt
+    }
+    if = {
+        limit = {
+            any_child = {
+                has_trait = bastard
+                is_lowborn = no
+                dynasty = scope:new_head.dynasty
+                NOT =  { house = scope:new_house }
+            }
+        }
+        every_child = {
+            limit = {
+                has_trait = bastard
+                is_lowborn = no
+                dynasty = scope:new_head.dynasty
+                NOT =  { house = scope:new_house }
+            }
+            set_house = scope:new_house
+        }
+    }
+    if = {
+        limit = {
+            any_artifact = {
+                trigger_if = {
+                    limit = { exists = var:banner_dynasty }
+                    var:banner_dynasty = root.dynasty
+                }
+                trigger_else = { always = no }
+                artifact_owner = {
+                    NOT = { this = root }
+                    in_diplomatic_range = root
+                }
+                NOT = {
+                    any_artifact_house_claimant = {
+                        this = scope:new_house
+                    }
+                }
+            }
+        }
+        random_artifact = {
+            limit = {
+                exists = var:banner_dynasty
+                var:banner_dynasty = root.dynasty
+                artifact_owner = { in_diplomatic_range = root }
+                NOT = {
+                    any_artifact_house_claimant = {
+                        this = scope:new_house
+                    }
+                }
+            }
+            save_scope_as = new_branch_dynasty_banner
+        }
+        scope:new_house = {
+            add_house_artifact_claim = scope:new_branch_dynasty_banner
+        }
+    }
+
+    # Struggle Catalysts
+    if = {
+        limit = {
+            root =  {
+                exists = house
+                exists = house.house_head
+                any_character_struggle	 = {
+                    involvement = involved
+                    phase_has_catalyst = catalyst_cadet_branch_created
+                }
+            }
+        }
+        every_character_struggle = {
+            involvement = involved
+            activate_struggle_catalyst = {
+                catalyst = catalyst_cadet_branch_created
+                character = root
+            }
+            log_debug_variable_for_persian_struggle_effect = { VAR = unrest_catalyst_cadet_branch_created }
+        }
+    }
+}
+
+
+general_create_cadet_effect = {
+    debug_log_scopes = yes
+
+    set_house = house:$HOUSE$
+
+    ROOT = {
+        save_scope_as = new_head
+    }
+
+    ROOT.house = {
+        save_scope_as = new_house
+    }
+
+    every_child = {
+        set_house = house:$HOUSE$
+
+        every_child = {
+            set_house = house:$HOUSE$
+
+            every_child = {
+                set_house = house:$HOUSE$
+
+            }
+        }
+    }
+
+    add_to_global_variable_list = {
+        name = global_variable_historical_cadet_houses
+        target = global_variable_formed_$HOUSE$
+    }
+}

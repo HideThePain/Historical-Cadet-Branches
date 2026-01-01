@@ -1,0 +1,170 @@
+﻿on_game_start_after_lobby = {
+    on_actions = {
+        historical_cadet_branches_game_start
+    }
+}
+
+historical_cadet_branches_game_start = {
+        effect = {
+            debug_log = "Running Historical On Game Start Checks"
+            # House Capet - After 987
+            if = {
+                limit = {
+                    game_start_date >= 987.1.1
+                    NOT = {
+                        is_target_in_global_variable_list = {
+                            name = global_variable_historical_cadet_houses
+                            target = global_variable_formed_house_capet
+                        }
+                    }
+                }
+                set_global_variable = {
+                    name = global_variable_formed_house_capet
+                    value = 1
+                }
+            }
+
+            # House Anjou - After 1266
+            if = {
+                limit = {
+                    game_start_date >= 1266.1.1
+                    NOT = {
+                        is_target_in_global_variable_list = {
+                            name = global_variable_historical_cadet_houses
+                            target = global_variable_formed_house_anjou
+                        }
+                    }
+                }
+                set_global_variable = {
+                    name = global_variable_formed_house_anjou
+                    value = 1
+                }
+            }
+
+            # House Valois - After 1328
+            if = {
+                limit = {
+                    game_start_date >= 1328.1.1
+                    NOT = {
+                        is_target_in_global_variable_list = {
+                            name = global_variable_historical_cadet_houses
+                            target = global_variable_formed_house_Valois_capet
+                        }
+                    }
+                }
+                set_global_variable = {
+                    name = global_variable_formed_house_Valois_capet
+                    value = 1
+                }
+            }
+
+            # House Gorm - After 876
+
+            if = {
+                limit = {
+                    game_start_date >= 876.1.1
+                    NOT = {
+                        is_target_in_global_variable_list = {
+                            name = global_variable_historical_cadet_houses
+                            target = global_variable_formed_house_af_gorm
+                        }
+                    }
+                }
+                set_global_variable = {
+                    name = global_variable_formed_house_af_gorm
+                    value = 1
+                }
+            }
+
+            # House Knytling - After 995
+
+            if = {
+                limit = {
+                    game_start_date >= 995.1.1
+                    NOT = {
+                        is_target_in_global_variable_list = {
+                            name = global_variable_historical_cadet_houses
+                            target = global_variable_formed_house_knytling
+                        }
+                    }
+                }
+                set_global_variable = {
+                    name = global_variable_formed_house_knytling
+                    value = 1
+                }
+            }
+
+            # House Crovan - After 950
+
+            if = {
+                limit = {
+                    game_start_date >= 950.1.1
+                    NOT = {
+                        is_target_in_global_variable_list = {
+                            name = global_variable_historical_cadet_houses
+                            target = global_variable_formed_house_british_isles_crovan
+                        }
+                    }
+                }
+                set_global_variable = {
+                    name = global_variable_formed_house_british_isles_crovan
+                    value = 1
+                }
+            }
+
+            # House Plantagenet - After 1113
+
+            if = {
+                limit = {
+                    game_start_date >= 1113.1.1
+                    NOT = {
+                        is_target_in_global_variable_list = {
+                            name = global_variable_historical_cadet_houses
+                            target = global_variable_formed_house_plantagenet
+                        }
+                    }
+                }
+                set_global_variable = {
+                    name = global_variable_formed_house_plantagenet
+                    value = 1
+                }
+            }
+
+            # House Welf - After 1113
+
+            if = {
+                limit = {
+                    game_start_date >= 1035.1.1
+                    NOT = {
+                        is_target_in_global_variable_list = {
+                            name = global_variable_historical_cadet_houses
+                            target = global_variable_formed_house_welf
+                        }
+                    }
+                }
+                set_global_variable = {
+                    name = global_variable_formed_house_welf
+                    value = 1
+                }
+            }
+
+            # House Luxembourg - After 1113
+
+            if = {
+                limit = {
+                    game_start_date >= 1247.1.1
+                    NOT = {
+                        is_target_in_global_variable_list = {
+                            name = global_variable_historical_cadet_houses
+                            target = global_variable_formed_house_luxembourg
+                        }
+                    }
+                }
+                set_global_variable = {
+                    name = global_variable_formed_house_luxembourg
+                    value = 1
+                }
+            }
+
+        }
+    }

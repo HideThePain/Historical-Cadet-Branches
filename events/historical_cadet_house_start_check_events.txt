@@ -1,0 +1,29 @@
+﻿# namespace = historical_cadet_house
+
+# # ================================================================
+# # Recursive Event for Propagating House Assignment
+# # ================================================================
+
+# # This event is designed to be triggered on the children of the "root" (or the starting character)
+# # that already received an assignment. It assigns the house (e.g., house_capet) to the current character
+# # and then triggers itself on every child, which naturally stops when there are no further descendants.
+# historical_cadet_house.1 = {
+# 	type = character_event
+#     title = "Propagating House Assignment"
+#     desc = "Assigns a new house to the character and propagates the effect recursively through all descendants."
+#     hidden = yes
+    
+#     immediate = {
+#         # Apply the house assignment. You may want to check or reapply in case of missing assignments.
+#         set_house = house:house_capet
+
+#         # For each child of the current character, trigger this same event.
+#         every_child = {
+#             trigger_event = historical_cadet_house.1
+#         }
+#     }
+
+#     option = {
+#         name = OK
+#     }
+# }

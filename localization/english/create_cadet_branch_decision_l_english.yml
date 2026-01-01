@@ -1,0 +1,82 @@
+﻿l_english:
+ # === Historical Cadet Branch Creation Decision ===
+ create_historical_branch_decision:0 "Create Historical Cadet Branch"
+ create_historical_branch_decision_desc:0 "Establish a cadet branch that mirrors a historically significant house. If you are of the Capetian dynasty and hold key titles, you may restore famous branches such as the House of Valois or House of Anjou."
+ create_historical_branch_decision_tooltip:0 "Form a cadet branch tied to historical dynastic roots."
+ create_historical_branch_decision_confirm:0 "Create Branch"
+ 
+ create_historical_branch_decision_valid:0 "You are a member of a major royal dynasty with a historically linked title."
+ 
+ # === Default Message Title ===
+ created_historical_cadet_branch_toast_new_house_desc:0 "A New House is Born"
+ 
+ # === CAPET ===
+ created_cadet_branch_capet_toast_desc:0 "[Character.GetName] has founded the illustrious House Capet once more, reviving the ancestral core of the Capetian line!"
+ global_variable_not_formed_house_capet_text:0 "The House of Capet has not been founded."
+ global_variable_formed_house_capet_text:0 "The House of Capet has been founded."
+ 
+ # === VALOIS ===
+ created_cadet_branch_valois_toast_desc:0 "[Character.GetName] has founded the House of Valois, a proud cadet branch of the Capetian bloodline."
+ global_variable_not_formed_house_valois_text:0 "The House of Valois has not been founded."
+ 
+ # === HABSBURG ===
+ created_cadet_branch_habsburg_toast_desc:0 "[Character.GetName] has established the House of Habsburg, heralding a new era for the imperial bloodline."
+ global_variable_not_formed_house_habsburg_text:0 "The House of Habsburg has not been founded."
+ 
+ # === WITTELSBACH ===
+ created_cadet_branch_wittelsbach_toast_desc:0 "[Character.GetName] has founded the House of Wittelsbach, reviving the Bavarian royal lineage."
+ global_variable_not_formed_house_wittelsbach_text:0 "The House of Wittelsbach has not been founded."
+ 
+ # === AF GORM ===
+ created_cadet_branch_af_gorm_toast_desc:0 "[Character.GetName] has created the House of af Gorm, continuing the legacy of the Scandinavian line."
+ global_variable_not_formed_house_af_gorm_text:0 "The House of af Gorm has not been founded."
+ global_variable_formed_house_af_gorm_text:0 "The House of af Gorm has been founded."
+ 
+ # === KNYTLING ===
+ created_cadet_branch_knytling_toast_desc:0 "[Character.GetName] has established the House of Knytling, honoring the ancient Danish kings."
+ global_variable_not_formed_house_knytling_text:0 "The House of Knytling has not been founded."
+ 
+ # === ESTRID ===
+ created_cadet_branch_estrid_toast_desc:0 "[Character.GetName] has revived the House of Estrid, preserving its noble Scandinavian roots."
+ global_variable_not_formed_house_estrid_text:0 "The House of Estrid has not been founded."
+ 
+ # === CROVAN ===
+ created_cadet_branch_crovan_toast_desc:0 "[Character.GetName] has founded the House of Crovan, perpetuating the Norse-Gaelic legacy."
+ global_variable_not_formed_house_crovan_text:0 "The House of Crovan has not been founded."
+ 
+ # === PLANTAGENET ===
+ created_cadet_branch_plantagenet_toast_desc:0 "[Character.GetName] has established the House of Plantagenet, carrying forward the English royal bloodline."
+ global_variable_not_formed_house_plantagenet_text:0 "The House of Plantagenet has not been founded."
+ 
+ # === WELF ===
+ created_cadet_branch_welf_toast_desc:0 "[Character.GetName] has revived the House of Welf, strengthening the German princely traditions."
+ global_variable_not_formed_house_welf_text:0 "The House of Welf has not been founded."
+ 
+ # === LUXEMBOURG ===
+ created_cadet_branch_luxembourg_toast_desc:0 "[Character.GetName] has founded the House of Luxembourg, continuing its historic dynastic legacy."
+ global_variable_not_formed_house_luxembourg_text:0 "The House of Luxembourg has not been founded."
+ 
+ # === Fallback ===
+ created_cadet_branch_generic_toast_desc:0 "[Character.GetName] has established a new cadet branch to carry on their legacy."
+ 
+ # === Debug ===
+ debug_log_house_capet_triggered:0 "DEBUG: Capet condition met. Assigning house_capet."
+ debug_log_house_valois_triggered:0 "DEBUG: Valois condition met. Assigning house_valois."
+ debug_log_house_habsburg_triggered:0 "DEBUG: Habsburg condition met. Assigning house_habsburg."
+ debug_log_house_wittelsbach_triggered:0 "DEBUG: Wittelsbach condition met. Assigning house_wittelsbach."
+ debug_log_house_af_gorm_triggered:0 "DEBUG: af Gorm condition met. Assigning house_af_gorm."
+ debug_log_house_knytling_triggered:0 "DEBUG: Knytling condition met. Assigning house_knytling."
+ debug_log_house_estrid_triggered:0 "DEBUG: Estrid condition met. Assigning house_estrid."
+ debug_log_house_crovan_triggered:0 "DEBUG: Crovan condition met. Assigning house_crovan."
+ debug_log_house_plantagenet_triggered:0 "DEBUG: Plantagenet condition met. Assigning house_plantagenet."
+ debug_log_house_welf_triggered:0 "DEBUG: Welf condition met. Assigning house_welf."
+ debug_log_house_luxembourg_triggered:0 "DEBUG: Luxembourg condition met. Assigning house_luxembourg."
+ debug_log_no_house_triggered:0 "DEBUG: No historical house matched. Using new generated cadet house."
+
+ dynn_ValoisCapet:0 = "Valois"
+ dynn_Luxembourg:0 = "Luxembourg"
+ 
+ #  custom_tooltip = {
+ #     text = global_variable_formed_house_estrid_text
+ #     NOT = { has_global_variable = global_variable_formed_house_estrid }
+ #  }
