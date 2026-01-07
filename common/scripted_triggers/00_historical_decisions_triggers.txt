@@ -1,0 +1,254 @@
+﻿can_form_historical_house = {
+    OR = {
+        AND = {
+            dynasty = dynasty:743  # Found House Capet
+            OR = {
+                has_title = title:c_ile_de_france
+                has_title = title:d_valois
+                has_title = title:k_france
+            }
+            custom_tooltip = {
+                text = global_variable_not_formed_house_capet_text
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_capet
+                    }
+                }
+            }
+        }
+        AND = {
+            dynasty = dynasty:743 # Found House Valois-Capet
+            OR = {
+                has_title = title:c_ile_de_france
+                has_title = title:d_valois
+                has_title = title:k_france
+            }
+            custom_tooltip = {
+                text = global_variable_not_formed_house_valois_capet_text
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_Valois_Capet
+                    }
+                }
+            }
+            custom_tooltip = {
+                text = global_variable_formed_house_capet_text
+                is_target_in_global_variable_list = {
+                    name = global_variable_historical_cadet_houses
+                    target = global_variable_formed_house_capet
+                }
+            }
+        }
+        AND = {
+            dynasty = dynasty:664 # Found House Habsburg
+            OR = {
+                has_title = title:c_aargau
+                has_title = title:d_osterreich
+                has_title = title:k_austria
+            }
+            custom_tooltip = {
+                text = global_variable_not_formed_house_habsburg_text
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_habsburg
+                    }
+                }
+            }
+        }
+        AND = {
+            dynasty = dynasty:416 # Found House Wittelsbach
+            OR = {
+                has_title = title:d_bavaria
+                has_title = title:c_rothenburg
+            }
+            custom_tooltip = {
+                text = global_variable_not_formed_house_wittelsbach_text
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_wittelsbach
+                    }
+                }
+            }
+        }
+        AND = {
+            dynasty = dynasty:490 # Found House Gorm
+            has_title = title:k_denmark
+            custom_tooltip = {
+                text = global_variable_not_formed_house_af_gorm_text
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_af_gorm
+                    }
+                }
+            }
+        }
+        AND = {
+            dynasty = dynasty:490 # Found House Knytling
+            has_title = title:k_england
+            custom_tooltip = {
+                text = global_variable_formed_house_af_gorm_text
+                is_target_in_global_variable_list = {
+                    name = global_variable_historical_cadet_houses
+                    target = global_variable_formed_house_af_gorm
+                }
+            }
+            custom_tooltip = {
+                text = global_variable_not_formed_house_knytling_text
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_knytling
+                    }
+                }
+            }
+        }
+        AND = {
+            dynasty = dynasty:490 # Found House Crovan
+            has_title = title:d_western_isles
+            custom_tooltip = {
+                text = global_variable_not_formed_house_crovan_text
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_crovan
+                    }
+                }
+            }
+        }
+        AND = {
+            dynasty = dynasty:723 # Found House Plantagenet
+            OR = {
+                has_title = title:d_anjou
+                has_title = title:d_normandy
+            }
+            custom_tooltip = {
+                text = global_variable_not_formed_house_plantagenet_text
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_plantagenet
+                    }
+                }
+            }
+        }
+        AND = {
+            dynasty = dynasty:803 # Found House Welf
+            has_title = title:d_bavaria
+            custom_tooltip = {
+                text = global_variable_not_formed_house_welf_text
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_welf
+                    }
+                }
+            }
+        }
+        AND = {
+            dynasty = dynasty:287 # Found House Luxembourg
+            has_title = title:d_luxembourg
+            custom_tooltip = {
+                text = global_variable_not_formed_house_luxembourg_text
+                NOT = {
+                    is_target_in_global_variable_list = {
+                        name = global_variable_historical_cadet_houses
+                        target = global_variable_formed_house_luxembourg
+                    }
+                }
+            }
+        }
+    }
+}
+
+# which_historical_house_form = {
+#     OR = {
+#         trigger_if = {
+
+#         }
+#         limit = {
+#                 dynasty = dynasty:743  # Capet
+#                 OR = {
+#                     has_title = title:d_valois
+#                     has_title = title:k_france
+#                 }
+
+#                 NOT = { has_global_variable = global_variable_formed_house_capet }
+#         }
+#     }
+# }
+
+one_historical_house_not_formed = {
+    OR = {
+        NOT = {
+            is_target_in_global_variable_list = {
+                name = global_variable_historical_cadet_houses
+                target = global_variable_formed_house_capet
+            }
+        }
+        NOT = {
+            is_target_in_global_variable_list = {
+                name = global_variable_historical_cadet_houses
+                target = global_variable_formed_house_Valois_Capet
+            }
+        }
+        NOT = {
+            is_target_in_global_variable_list = {
+                name = global_variable_historical_cadet_houses
+                target = global_variable_formed_house_habsburg
+            }
+        }
+        NOT = {
+            is_target_in_global_variable_list = {
+                name = global_variable_historical_cadet_houses
+                target = global_variable_formed_house_wittelsbach
+            }
+        }
+        NOT = {
+            is_target_in_global_variable_list = {
+                name = global_variable_historical_cadet_houses
+                target = global_variable_formed_house_af_gorm
+            }
+        }
+        NOT = {
+            is_target_in_global_variable_list = {
+                name = global_variable_historical_cadet_houses
+                target = global_variable_formed_house_knytling
+            }
+        }
+        NOT = {
+            is_target_in_global_variable_list = {
+                name = global_variable_historical_cadet_houses
+                target = global_variable_formed_house_estrid
+            }
+        }
+        NOT = {
+            is_target_in_global_variable_list = {
+                name = global_variable_historical_cadet_houses
+                target = global_variable_formed_house_crovan
+            }
+        }
+        NOT = {
+            is_target_in_global_variable_list = {
+                name = global_variable_historical_cadet_houses
+                target = global_variable_formed_house_plantagenet
+            }
+        }
+        NOT = {
+            is_target_in_global_variable_list = {
+                name = global_variable_historical_cadet_houses
+                target = global_variable_formed_house_welf
+            }
+        }
+        NOT = {
+            is_target_in_global_variable_list = {
+                name = global_variable_historical_cadet_houses
+                target = global_variable_formed_house_luxembourg
+            }
+        }
+    }
+}

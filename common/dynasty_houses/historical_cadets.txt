@@ -1,0 +1,50 @@
+﻿#Robertine and Capetian Cadets
+
+#House Anjou of Capet #81
+house_Anjou_Capet = {
+	prefix = "dynnp_d_"
+    name = "dynn_AnjouCapet"
+    dynasty = 743 #Robertine but actually Anjou Capet. Can't make cadets of cadets
+}
+
+#House Valois of Capet #81
+house_Valois_Capet = {
+	prefix = "dynnp_de"
+    name = "dynn_ValoisCapet"
+    dynasty = 743 #Robertine but actually Valois capet. Can't make cadets of cadets
+}
+
+#House Bourbon of Capet #81
+house_Bourbon_Capet = {
+	prefix = "dynnp_de"
+    name = "dynn_BourbonCapet"
+    dynasty = 743 #Robertine but actually Bourbon capet. Can't make cadets of cadets
+}
+
+#House Evreux of Capet #81
+house_Evreux_Capet = {
+	prefix = "dynnp_d_"
+    name = "dynn_EvreuxCapet"
+    dynasty = 743 #Robertine but actually Evreux capet. Can't make cadets of cadets
+}
+
+#House Vermandois of Capet #81
+house_Vermandois_Capet = {
+	prefix = "dynnp_de"
+    name = "dynn_VermandoisCapet"
+    dynasty = 743 #Robertine but actually Vermandois capet. Can't make cadets of cadets
+}
+
+#House Artois of Capet #81
+house_Artois = {
+	prefix = "dynnp_d_"
+    name = "dynn_Artois"
+    dynasty = 743 #Robertine but actually Artois capet. Can't make cadets of cadets
+}
+
+#House Luxembourg of Limburg #287
+house_Luxembourg = {
+	prefix = "dynnp_von"
+    name = "dynn_Luxembourg"
+    dynasty = 287 #Limburg
+}

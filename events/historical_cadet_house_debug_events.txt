@@ -1,0 +1,206 @@
+namespace = historical_cadet_house_debug_events
+
+# Debug selection events: paginated selector (two pages)
+
+historical_cadet_house_debug_events.001 = {
+    type = character_event
+    is_triggered_only = yes
+    title = debug_select_title
+    desc = debug_select_desc
+
+    # Page 1: first set of houses
+    option = {
+        name = debug_option_capet
+        hidden_effect = {
+            add_prestige = 1000
+            general_create_cadet_effect = { HOUSE = house_capet }
+            send_interface_toast = {
+                type = msg_created_new_house
+                title = created_historical_cadet_branch_toast_new_house_desc
+                left_icon = scope:new_head
+                desc = created_cadet_branch_capet_toast_desc
+            }
+        }
+    }
+
+    option = {
+        name = debug_option_valois
+        hidden_effect = {
+            add_prestige = 1000
+            general_create_cadet_effect = { HOUSE = house_Valois_Capet }
+            send_interface_toast = {
+                type = msg_created_new_house
+                title = created_historical_cadet_branch_toast_new_house_desc
+                left_icon = scope:new_head
+                desc = created_cadet_branch_Valois_Capet_toast_desc
+            }
+        }
+    }
+
+    option = {
+        name = debug_option_habsburg
+        hidden_effect = {
+            add_prestige = 1000
+            general_create_cadet_effect = { HOUSE = house_habsburg }
+            send_interface_toast = {
+                type = msg_created_new_house
+                title = created_historical_cadet_branch_toast_new_house_desc
+                left_icon = scope:new_head
+                desc = created_cadet_branch_habsburg_toast_desc
+            }
+        }
+    }
+
+    option = {
+        name = debug_option_wittelsbach
+        hidden_effect = {
+            add_prestige = 1000
+            general_create_cadet_effect = { HOUSE = house_wittelsbach }
+            send_interface_toast = {
+                type = msg_created_new_house
+                title = created_historical_cadet_branch_toast_new_house_desc
+                left_icon = scope:new_head
+                desc = created_cadet_branch_wittelsbach_toast_desc
+            }
+        }
+    }
+
+    option = {
+        name = debug_option_af_gorm
+        hidden_effect = {
+            add_prestige = 1000
+            general_create_cadet_effect = { HOUSE = house_af_gorm }
+            send_interface_toast = {
+                type = msg_created_new_house
+                title = created_historical_cadet_branch_toast_new_house_desc
+                left_icon = scope:new_head
+                desc = created_cadet_branch_af_gorm_toast_desc
+            }
+        }
+    }
+
+    option = {
+        name = debug_option_knytling
+        hidden_effect = {
+            add_prestige = 1000
+            general_create_cadet_effect = { HOUSE = house_knytling }
+            send_interface_toast = {
+                type = msg_created_new_house
+                title = created_historical_cadet_branch_toast_new_house_desc
+                left_icon = scope:new_head
+                desc = created_cadet_branch_knytling_toast_desc
+            }
+        }
+    }
+
+    option = {
+        name = debug_next_page
+        trigger_event = historical_cadet_house_debug_events.002
+    }
+
+    option = {
+        name = Cancel
+    }
+}
+
+
+historical_cadet_house_debug_events.002 = {
+    type = character_event
+    is_triggered_only = yes
+    title = debug_select_title
+    desc = debug_select_desc
+
+    # Page 2: remaining houses + random generate
+    option = {
+        name = debug_option_estrid
+        hidden_effect = {
+            add_prestige = 1000
+            general_create_cadet_effect = { HOUSE = house_estrid }
+            send_interface_toast = {
+                type = msg_created_new_house
+                title = created_historical_cadet_branch_toast_new_house_desc
+                left_icon = scope:new_head
+                desc = created_cadet_branch_estrid_toast_desc
+            }
+        }
+    }
+
+    option = {
+        name = debug_option_crovan
+        hidden_effect = {
+            add_prestige = 1000
+            general_create_cadet_effect = { HOUSE = house_british_isles_crovan }
+            send_interface_toast = {
+                type = msg_created_new_house
+                title = created_historical_cadet_branch_toast_new_house_desc
+                left_icon = scope:new_head
+                desc = created_cadet_branch_british_isles_crovan_toast_desc
+            }
+        }
+    }
+
+    option = {
+        name = debug_option_plantagenet
+        hidden_effect = {
+            add_prestige = 1000
+            general_create_cadet_effect = { HOUSE = house_plantagenet }
+            send_interface_toast = {
+                type = msg_created_new_house
+                title = created_historical_cadet_branch_toast_new_house_desc
+                left_icon = scope:new_head
+                desc = created_cadet_branch_plantagenet_toast_desc
+            }
+        }
+    }
+
+    option = {
+        name = debug_option_welf
+        hidden_effect = {
+            add_prestige = 1000
+            general_create_cadet_effect = { HOUSE = house_welf }
+            send_interface_toast = {
+                type = msg_created_new_house
+                title = created_historical_cadet_branch_toast_new_house_desc
+                left_icon = scope:new_head
+                desc = created_cadet_branch_welf_toast_desc
+            }
+        }
+    }
+
+    option = {
+        name = debug_option_luxembourg
+        hidden_effect = {
+            add_prestige = 1000
+            general_create_cadet_effect = { HOUSE = house_Luxembourg }
+            send_interface_toast = {
+                type = msg_created_new_house
+                title = created_historical_cadet_branch_toast_new_house_desc
+                left_icon = scope:new_head
+                desc = created_cadet_branch_luxembourg_toast_desc
+            }
+        }
+    }
+
+    option = {
+        name = debug_option_generate
+        hidden_effect = {
+            add_prestige = 1000
+            create_cadet_branch = yes
+            send_interface_toast = {
+                type = msg_created_new_house
+                title = created_historical_cadet_branch_toast_new_house_desc
+                left_icon = scope:new_head
+                desc = created_cadet_branch_generic_toast_desc
+            }
+        }
+    }
+
+    option = {
+        name = debug_prev_page
+        trigger_event = historical_cadet_house_debug_events.001
+    }
+
+    option = {
+        name = Cancel
+    }
+}
