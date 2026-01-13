@@ -70,6 +70,7 @@
  create_historical_branch_debug_decision:0 "DEBUG: Form Any Historical Cadet Branch"
  create_historical_branch_debug_decision_desc:0 "Open a debug selector to form any historical cadet branch regardless of the usual requirements. Use for testing."
  create_historical_branch_debug_decision_tooltip:0 "Open a debug chooser to form any historical house."
+ create_historical_branch_debug_decision_confirm:0 "Create Debug Branch"
  
  debug_select_title:0 "DEBUG: Choose Historical House"
  debug_select_desc:0 "Select a cadet house to form immediately — this bypasses normal requirements."
@@ -85,7 +86,7 @@
  debug_option_plantagenet:0 "House Plantagenet"
  debug_option_welf:0 "House Welf"
  debug_option_luxembourg:0 "House Luxembourg"
- debug_option_generate:0 "Generate New Cadet Branch (random)"
+ debug_option_generate:0 "Generate New Cadet Branch (Random)"
  debug_option_cancel:0 "Cancel"
  debug_next_page:0 "Next Page"
  debug_prev_page:0 "Previous Page"

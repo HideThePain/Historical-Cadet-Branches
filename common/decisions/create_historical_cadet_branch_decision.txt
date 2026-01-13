@@ -295,7 +295,7 @@ create_historical_branch_debug_decision = {
     }
 
     effect = {
-        trigger_event = historical_cadet_house.001
+        trigger_event = historical_cadet_house_debug_events.001
     }
 
     ai_will_do = {
